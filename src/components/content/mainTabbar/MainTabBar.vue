@@ -7,7 +7,7 @@
         src="~assets/img/tabbar/home_active.svg"
         alt=""
       />
-      <div slot="item-text">首页</div>
+      <div slot="item-text" activeColor="">首页</div>
     </tab-bar-item>
     <tab-bar-item path="/category">
       <img slot="item-icon" src="~assets/img/tabbar/category.svg" alt="" />
