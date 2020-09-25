@@ -13,48 +13,49 @@
 </template>
 
 <script>
-export default {
-  name: "TabControl",
-  props: {
-    titles: {
-      type: Array,
-      default() {
-        return [];
+  export default {
+    name: "TabControl",
+    props: {
+      titles: {
+        type: Array,
+        default() {
+          return [];
+        }
+      }
+    },
+    data() {
+      return {
+        currentIndex: 0
+      };
+    },
+    methods: {
+      itemClick(index) {
+        this.currentIndex = index;
+        this.$emit("tabClick", index);
       }
     }
-  },
-  data() {
-    return {
-      currentIndex: 0
-    };
-  },
-  methods: {
-    itemClick(index) {
-      this.currentIndex = index;
-    }
-  }
-};
+  };
 </script>
 
 <style>
-.tab-control {
-  background-color: #fff;
-  text-align: center;
-  display: flex;
-  font-size: 15px;
-  height: 40px;
-  line-height: 40px;
-}
-.tab-control-item {
-  flex: 1;
-}
-.tab-control-item span {
-  padding: 5px;
-}
-.active {
-  color: var(--color-high-text);
-}
-.active span {
-  border-bottom: 3px solid var(--color-high-text);
-}
+  .tab-control {
+    background-color: #fff;
+    text-align: center;
+    display: flex;
+    font-size: 15px;
+    height: 40px;
+    line-height: 40px;
+  }
+  .tab-control-item {
+    flex: 1;
+  }
+  .tab-control-item span {
+    padding: 5px;
+  }
+  .active {
+    color: var(--color-high-text);
+  }
+  .active span {
+    border-bottom: 3px solid var(--color-high-text);
+  }
 </style>
