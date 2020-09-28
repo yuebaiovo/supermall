@@ -54,6 +54,7 @@
 
   import { getHomeMultidata, getHomeGoods } from "network/home";
   import { debounce } from "common/utils";
+  import { format } from "url";
 
   export default {
     name: "Home",
@@ -118,15 +119,6 @@
       /**
        * 事件监听相关的方法
        */
-      debounce(func, delay) {
-        let timer = null;
-        return function(...args) {
-          if (timer) clearTimeout(timer);
-          timer = setTimeout(() => {
-            func.apply(this, args);
-          }, delay);
-        };
-      },
       tabClick(index) {
         switch (index) {
           case 0:
