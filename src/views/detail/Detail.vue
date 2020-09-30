@@ -11,6 +11,7 @@
   </div>
 </template>
 
+
 <script>
   import DetailNavBar from './childComps/DetailNavBar'
   import DetailSwiper from './childComps/DetailSwiper'
