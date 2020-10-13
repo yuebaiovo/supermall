@@ -108,7 +108,6 @@ export default {
   methods: {
     /**
      * 事件监听相关的方法
-
      */
     tabClick(index) {
       switch (index) {
