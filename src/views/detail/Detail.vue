@@ -25,7 +25,6 @@
   import DetailGoodsInfo from "./childComps/DetailGoodsInfo";
   import DetailParamInfo from "./childComps/DetailParamInfo";
 
-
   import Scroll from "components/common/scroll/Scroll";
 
   import { getDetail, Goods, Shop, GoodsParam } from "network/detail";
